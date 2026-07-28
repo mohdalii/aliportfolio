@@ -145,14 +145,20 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.55 }}
             className="mt-8 flex flex-wrap items-center justify-center gap-3 md:justify-start"
-          >
-            <MagneticButton
-              as="a"
-              href={PROFILE.resumeUrl}
-              className="btn-electric group inline-flex items-center gap-2 rounded-xl px-5 py-3 text-sm font-medium text-white"
-            >
-              <Download size={16} className="transition-transform group-hover:-translate-y-0.5" /> Download Resume
-            </MagneticButton>
+          ><MagneticButton
+  as="a"
+  href="/ali.pdf"
+  download
+  target="_blank"
+  rel="noopener noreferrer"
+  className="btn-electric group inline-flex items-center gap-2 rounded-xl px-5 py-3 text-sm font-medium text-white"
+>
+  <Download
+    size={16}
+    className="transition-transform group-hover:-translate-y-0.5"
+  />
+  Download Resume
+</MagneticButton>
            
           </motion.div>
 
