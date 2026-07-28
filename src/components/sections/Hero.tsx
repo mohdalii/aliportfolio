@@ -153,18 +153,7 @@ export function Hero() {
             >
               <Download size={16} className="transition-transform group-hover:-translate-y-0.5" /> Download Resume
             </MagneticButton>
-            <MagneticButton
-              onClick={() => scrollTo('#contact')}
-              className="btn-glass group inline-flex items-center gap-2 rounded-xl px-5 py-3 text-sm font-medium text-fg"
-            >
-              <Mail size={16} className="transition-transform group-hover:rotate-12" /> Contact Me
-            </MagneticButton>
-            <MagneticButton
-              onClick={() => scrollTo('#projects')}
-              className="btn-glass group inline-flex items-center gap-2 rounded-xl px-5 py-3 text-sm font-medium text-fg"
-            >
-              See Projects
-            </MagneticButton>
+           
           </motion.div>
 
           {/* quick socials */}
@@ -174,6 +163,9 @@ export function Hero() {
             transition={{ duration: 0.6, delay: 0.7 }}
             className="mt-6 flex items-center justify-center gap-3 md:justify-start"
           >
+
+
+
             <a href={PROFILE.github} aria-label="GitHub" className="grid h-9 w-9 place-items-center rounded-lg glass text-muted transition hover:text-electric-400 hover:border-electric-400/50 hover:bg-electric-500/10 hover:shadow-glow-electric">
               <Github size={15} />
             </a>
