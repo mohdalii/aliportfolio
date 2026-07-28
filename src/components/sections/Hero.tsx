@@ -184,52 +184,66 @@ export function Hero() {
         </div>
 
         {/* Floating tech badges */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8, delay: 0.3 }}
-          className="relative mx-auto flex w-full max-w-sm flex-col items-center justify-center gap-5"
-        >
-          <div className="relative grid aspect-square w-full place-items-center rounded-[2.4rem] glass-strong p-8">
-            <div className="absolute -inset-8 rounded-[2.4rem] bg-gradient-to-tr from-royal-600/45 via-electric-500/40 to-accent-cyan/45 blur-2xl animate-pulse-glow" />
-            <div className="conic-ring absolute -inset-[3px] rounded-[2.1rem] opacity-70 blur-[2px]" />
-            <div className="absolute -inset-[3px] rounded-[2.1rem] p-[2px]">
-              <div className="conic-ring h-full w-full rounded-[2.1rem] opacity-90" />
-            </div>
+        {/* Hero Image */}
+<motion.div
+  initial={{ opacity: 0, x: 80 }}
+  animate={{ opacity: 1, x: 0 }}
+  transition={{ duration: 0.8, delay: 0.3 }}
+  className="relative mx-auto flex w-full items-center justify-center"
+>
+  {/* Blue Glow */}
+  <div className="absolute h-[600px] w-[430px] rounded-full bg-gradient-to-br from-blue-500/30 via-cyan-400/20 to-purple-500/20 blur-[120px]" />
 
-            <div className="relative z-10 text-center">
-              <span className="gradient-text-cool text-5xl font-bold">AI + Web</span>
-              <p className="mt-2 text-sm text-muted">Building intelligent, beautiful software</p>
-              <button
-                onClick={() => scrollTo('#projects')}
-                className="mt-5 inline-flex h-10 w-10 items-center justify-center rounded-full btn-electric text-white transition hover:scale-110"
-              >
-                <ArrowDown size={18} />
-              </button>
-            </div>
-          </div>
+  {/* Glass Background */}
+  <div className="absolute h-[560px] w-[390px] rounded-[40px] border border-white/10 bg-white/5 backdrop-blur-xl" />
 
-          <div className="flex flex-wrap items-center justify-center gap-3">
-            {FLOAT_BADGES.map((b) => (
-              <motion.div
-                key={b.label}
-                initial={{ opacity: 0, scale: 0.7 }}
-                animate={{ opacity: 1, scale: 1, y: [0, -8, 0] }}
-                transition={{
-                  opacity: { delay: b.delay + 0.8, duration: 0.5 },
-                  scale: { delay: b.delay + 0.8, duration: 0.5 },
-                  y: { duration: 4, repeat: Infinity, ease: 'easeInOut', delay: b.delay },
-                }}
-                className="flex items-center gap-2 rounded-xl glass-strong px-3 py-2 text-xs text-fg shadow-card"
-              >
-                <span className={`grid h-7 w-7 place-items-center rounded-lg bg-gradient-to-br ${b.color} ${b.accent}`}>
-                  <b.icon size={14} />
-                </span>
-                <span className="font-medium">{b.label}</span>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
+  {/* Floating Image */}
+  <motion.img
+    src="/ali.jpeg"
+    alt="Ali"
+    animate={{ y: [0, -15, 0] }}
+    transition={{
+      duration: 5,
+      repeat: Infinity,
+      ease: "easeInOut",
+    }}
+    whileHover={{
+      scale: 1.03,
+      rotateY: 8,
+      rotateX: -5,
+    }}
+    className="relative z-10 h-[560px] w-auto rounded-[35px] object-cover drop-shadow-[0_0_60px_rgba(37,99,235,0.45)]"
+    style={{ transformStyle: "preserve-3d" }}
+  />
+
+  {/* Floating Badge 1 */}
+  <motion.div
+    animate={{ y: [0, -8, 0] }}
+    transition={{ duration: 4, repeat: Infinity }}
+    className="absolute left-0 top-16 rounded-xl border border-cyan-500/30 bg-slate-900/70 px-4 py-2 backdrop-blur-xl"
+  >
+    <span className="text-cyan-400 font-semibold">⚛ React</span>
+  </motion.div>
+
+  {/* Floating Badge 2 */}
+  <motion.div
+    animate={{ y: [0, 8, 0] }}
+    transition={{ duration: 5, repeat: Infinity }}
+    className="absolute right-0 top-36 rounded-xl border border-purple-500/30 bg-slate-900/70 px-4 py-2 backdrop-blur-xl"
+  >
+    <span className="text-purple-400 font-semibold">🤖 AI Developer</span>
+  </motion.div>
+
+  {/* Floating Badge 3 */}
+  <motion.div
+    animate={{ y: [0, -10, 0] }}
+    transition={{ duration: 6, repeat: Infinity }}
+    className="absolute bottom-12 left-8 rounded-xl border border-blue-500/30 bg-slate-900/70 px-4 py-2 backdrop-blur-xl"
+  >
+    <span className="text-blue-400 font-semibold">🚀 MERN Stack</span>
+  </motion.div>
+</motion.div>
+
       </div>
 
       <motion.button
