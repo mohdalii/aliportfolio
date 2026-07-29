@@ -168,13 +168,13 @@ export const EXPERIENCE = [
   {
     role: 'AI Engineer (Project Lead)',
     org: 'Automated AI Floor Plan Generator',
-    period: '2024 — 2025',
+    period: '2026 — present',
     description: 'Led end-to-end architecture: generative ML, AutoCAD plugin (C#), DXF processing, and 3D web viewer.',
   },
   {
     role: 'Full Stack Developer',
     org: 'Independent Projects',
-    period: '2022 — Present',
+    period: '2024 — Present',
     description: 'Built and shipped React, FastAPI, and Node applications with a focus on UX and performance.',
   },
   {
