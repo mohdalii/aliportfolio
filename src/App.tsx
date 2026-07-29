@@ -12,7 +12,6 @@ import { About } from './components/sections/About';
 import { Skills } from './components/sections/Skills';
 import { Projects } from './components/sections/Projects';
 import { ProjectModal } from './components/sections/ProjectModal';
-import { Timeline } from './components/sections/Timeline';
 import { Certifications } from './components/sections/Certifications';
 import { Experience } from './components/sections/Experience';
 import { Contact } from './components/sections/Contact';
@@ -67,7 +66,6 @@ function Portfolio() {
         <About />
         <Skills />
         <Projects onOpen={setProjectId} />
-        <Timeline />
         <Certifications />
         <Experience />
         <Contact />

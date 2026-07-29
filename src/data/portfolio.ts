@@ -141,38 +141,7 @@ export const PROJECTS = [
   },
 ];
 
-export const TIMELINE = [
-  {
-    year: '2021',
-    title: 'Started Computer Science Engineering',
-    type: 'education',
-    description: 'Began undergraduate studies in Computer Science & Engineering. Fell in love with algorithms and systems.',
-  },
-  {
-    year: '2022',
-    title: 'First Full Stack Projects',
-    type: 'projects',
-    description: 'Shipped React + Node applications and started exploring machine learning on the side.',
-  },
-  {
-    year: '2023',
-    title: 'Infosys Springboard & NPTEL Certifications',
-    type: 'certifications',
-    description: 'Completed industry certifications in full stack development and AI foundations.',
-  },
-  {
-    year: '2024',
-    title: 'AI Floor Plan Generator — Featured Build',
-    type: 'projects',
-    description: 'Designed and built the Automated AI Floor Plan Generator integrating ML, AutoCAD, and 3D visualization.',
-  },
-  {
-    year: '2025',
-    title: 'AI Engineer & Open Source Contributor',
-    type: 'journey',
-    description: 'Continuing to build at the intersection of AI, web, and design systems.',
-  },
-];
+
 
 export const CERTIFICATIONS = [
   {
@@ -230,6 +199,5 @@ export const NAV_LINKS = [
   { label: 'About', href: '#about' },
   { label: 'Skills', href: '#skills' },
   { label: 'Projects', href: '#projects' },
-  { label: 'Timeline', href: '#timeline' },
   { label: 'Contact', href: '#contact' },
 ];
