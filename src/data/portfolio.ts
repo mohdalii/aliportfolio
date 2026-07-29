@@ -10,25 +10,25 @@ export const PROFILE = {
   titles: ['Computer Science Engineer', 'AI Engineer', 'Full Stack Developer', 'Machine Learning Enthusiast'],
   tagline:
     'Building intelligent, beautiful, and performant software at the intersection of AI and modern web.',
-  email: 'mohammedali.dev@gmail.com',
-  phone: '+91 90000 00000',
+  email: 'aliahya17@gmail.com',
+  phone: '+91 9686732800',
   location: 'India',
-  github: 'https://github.com/',
-  linkedin: 'https://linkedin.com/in/',
+  github: 'https://github.com/mohdalii',
+  linkedin: 'https://www.linkedin.com/in/mohammed-ali-051b22279',
   resumeUrl: '#',
 };
 
 export const SOCIALS = [
-  { label: 'GitHub', href: 'https://github.com/', icon: 'github' },
-  { label: 'LinkedIn', href: 'https://linkedin.com/in/', icon: 'linkedin' },
-  { label: 'Email', href: 'mailto:mohammedali.dev@gmail.com', icon: 'mail' },
-  { label: 'Phone', href: 'tel:+919000000000', icon: 'phone' },
+  { label: 'GitHub', href: 'https://github.com/mohdalii', icon: 'github' },
+  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/mohammed-ali-051b22279', icon: 'linkedin' },
+  { label: 'Email', href: 'mailto:aliahya17@gmail.com', icon: 'mail' },
+  { label: 'Phone', href: 'tel:+919686732800', icon: 'phone' },
 ];
 
 export const STATS = [
-  { label: 'CGPA', value: 8.7, suffix: '', decimals: 1 },
-  { label: 'Projects Built', value: 24, suffix: '+' },
-  { label: 'Technologies', value: 30, suffix: '+' },
+  { label: 'CGPA', value: 7.2, suffix: '', decimals: 1 },
+  { label: 'Projects Built', value: 3, suffix: '+' },
+  { label: 'Technologies', value: 5, suffix: '+' },
   { label: 'Years Learning', value: 4, suffix: '+' },
   { label: 'Certifications', value: 6, suffix: '' },
 ];
