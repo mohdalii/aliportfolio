@@ -15,7 +15,7 @@ const ABOUT_CARDS = [
   {
     icon: Lightbulb,
     title: 'Skills',
-    body: 'Full stack development, machine learning, generative AI, and 3D visualization across 30+ technologies.',
+    body: 'Full stack development, machine learning, generative AI, and 3D visualization across 5+ technologies.',
     accent: 'amber' as const,
     glow: 'from-accent-amber/25 to-accent-pink/10',
   },
