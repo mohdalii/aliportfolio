@@ -197,30 +197,6 @@ export function Hero() {
             className="relative z-10 h-[560px] w-auto rounded-[35px] object-cover drop-shadow-[0_0_60px_rgba(37,99,235,0.45)]"
             style={{ transformStyle: 'preserve-3d' }}
           />
-
-          <motion.div
-            animate={{ y: [0, -8, 0] }}
-            transition={{ duration: 4, repeat: Infinity }}
-            className="absolute left-0 top-16 z-20 rounded-xl border border-cyan-500/30 bg-slate-900/70 px-4 py-2 backdrop-blur-xl"
-          >
-            <span className="font-semibold text-cyan-400">⚛ React</span>
-          </motion.div>
-
-          <motion.div
-            animate={{ y: [0, 8, 0] }}
-            transition={{ duration: 5, repeat: Infinity }}
-            className="absolute right-0 top-36 z-20 rounded-xl border border-purple-500/30 bg-slate-900/70 px-4 py-2 backdrop-blur-xl"
-          >
-            <span className="font-semibold text-purple-400">🤖 AI Developer</span>
-          </motion.div>
-
-          <motion.div
-            animate={{ y: [0, -10, 0] }}
-            transition={{ duration: 6, repeat: Infinity }}
-            className="absolute bottom-12 left-8 z-20 rounded-xl border border-blue-500/30 bg-slate-900/70 px-4 py-2 backdrop-blur-xl"
-          >
-            <span className="font-semibold text-blue-400">🚀 Full Stack</span>
-          </motion.div>
         </motion.div>
       </div>
 
