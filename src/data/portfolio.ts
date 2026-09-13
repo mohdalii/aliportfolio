@@ -14,21 +14,19 @@ export const PROFILE = {
   phone: '+91 9686732800',
   location: 'India',
   github: 'https://github.com/mohdalii',
-  linkedin: 'https://www.linkedin.com/in/mohammed-ali-051b22279',
-  resumeUrl: '#',
+  resumeUrl: '/ali.pdf',
 };
 
 export const SOCIALS = [
   { label: 'GitHub', href: 'https://github.com/mohdalii', icon: 'github' },
-  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/mohammed-ali-051b22279', icon: 'linkedin' },
   { label: 'Email', href: 'mailto:aliahya17@gmail.com', icon: 'mail' },
   { label: 'Phone', href: 'tel:+919686732800', icon: 'phone' },
 ];
 
 export const STATS = [
-  { label: 'CGPA', value: 7.2, suffix: '', decimals: 1 },
-  { label: 'Projects Built', value: 3, suffix: '+' },
-  { label: 'Technologies', value: 5, suffix: '+' },
+  { label: 'CGPA', value: 8.7, suffix: '', decimals: 1 },
+  { label: 'Projects Built', value: 24, suffix: '+' },
+  { label: 'Technologies', value: 30, suffix: '+' },
   { label: 'Years Learning', value: 4, suffix: '+' },
   { label: 'Certifications', value: 6, suffix: '' },
 ];
@@ -98,50 +96,70 @@ export const PROJECTS = [
     title: 'Automated AI Floor Plan Generator',
     subtitle: 'Featured Project',
     description:
-      'An AI-powered system that generates 2D architectural floor plans from natural-language briefs, converts them into 3D visualizations, and exports production-ready DXF files for AutoCAD. Combines generative ML with a real-time web viewer.',
+      'An AI-powered system that generates 2D residential floor plans and exports production-ready DXF files for AutoCAD, trained on a 17,000-sample residential floor plan dataset.',
     longDescription:
-      'The Automated AI Floor Plan Generator takes a textual design brief (room count, area, style) and produces a valid 2D layout using a constrained generative model. A custom AutoCAD plugin (C#) ingests the generated geometry, renders it in 3D, and exports DXF. XGBoost and Linear Regression models optimize room placement for area efficiency and adjacency rules. A React + Three.js dashboard visualizes the plan in 3D with real-time editing, while a FastAPI backend orchestrates inference, DXF processing, and persistence.',
-    tags: ['React', 'FastAPI', 'Three.js', 'AutoCAD Plugin', 'C#', 'Machine Learning', 'XGBoost', 'Linear Regression', '2D Layout Generation', '3D Visualization', 'DXF Processing'],
-    github: 'https://github.com/',
-    demo: '#',
+      'The Automated AI Floor Plan Generator takes a design brief (room count, area, style) and produces a valid 2D room layout. scikit-learn regression models handle room placement and sizing, trained on aggregate statistics (room frequency, adjacency, size ratios) mined from a 17,000-plan residential dataset. A FastAPI backend orchestrates inference and persistence, exports the generated geometry to production-ready DXF files via ezdxf for direct use in AutoCAD, and serves a React client for building and reviewing plans.',
+    tags: ['Python', 'FastAPI', 'scikit-learn', 'React', 'ezdxf', 'DXF Export', 'Pandas', 'NumPy'],
+    github: 'https://github.com/mohdalii/AI_Floor_Planner',
+    demo: '',
     featured: true,
   },
   {
-    id: 'vision-analytics',
-    title: 'Computer Vision Analytics Suite',
-    subtitle: 'Real-time vision pipeline',
+    id: 'student-management-system',
+    title: 'Student Management System',
+    subtitle: 'Full-stack admin & student portal',
     description:
-      'A modular computer-vision platform for object detection, segmentation, and activity recognition with a streaming dashboard and edge deployment support.',
-    tags: ['Python', 'OpenCV', 'PyTorch', 'FastAPI', 'React'],
-    github: 'https://github.com/',
-    demo: '#',
+      'A role-based student management system with separate admin and student dashboards — attendance tracking, fee management, course enrollment, results, timetables, and CSV/PDF report exports.',
+    tags: ['PHP', 'MySQL', 'JavaScript', 'CSS'],
+    github: 'https://github.com/mohdalii/student_management',
+    demo: '',
     featured: false,
   },
   {
-    id: 'genai-copilot',
-    title: 'GenAI Developer Copilot',
-    subtitle: 'LLM-powered assistant',
+    id: 'personal-portfolio',
+    title: 'Personal Portfolio Website',
+    subtitle: 'This site',
     description:
-      'A Retrieval-Augmented-Generation copilot for codebases — semantic search, summarization, and code generation grounded in your repository.',
-    tags: ['Generative AI', 'LangChain', 'Node', 'React', 'Vector DB'],
-    github: 'https://github.com/',
-    demo: '#',
-    featured: false,
-  },
-  {
-    id: 'quantum-ml-lab',
-    title: 'Quantum ML Playground',
-    subtitle: 'Research prototype',
-    description:
-      'An experimental notebook environment exploring quantum kernels and hybrid classical-quantum classifiers on small datasets.',
-    tags: ['Quantum Computing', 'Python', 'Qiskit', 'scikit-learn'],
-    github: 'https://github.com/',
-    demo: '#',
+      'This portfolio itself — a React + TypeScript site with Framer Motion animations, a command palette, custom cursor and scroll effects, and a fully themeable design system, deployed on Vercel.',
+    tags: ['React', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'Vite'],
+    github: 'https://github.com/mohdalii/aliportfolio',
+    demo: 'https://mohdali.vercel.app/',
     featured: false,
   },
 ];
 
-
+export const TIMELINE = [
+  {
+    year: '2021',
+    title: 'Started Computer Science Engineering',
+    type: 'education',
+    description: 'Began undergraduate studies in Computer Science & Engineering. Fell in love with algorithms and systems.',
+  },
+  {
+    year: '2022',
+    title: 'First Full Stack Projects',
+    type: 'projects',
+    description: 'Shipped React + Node applications and started exploring machine learning on the side.',
+  },
+  {
+    year: '2023',
+    title: 'Infosys Springboard & NPTEL Certifications',
+    type: 'certifications',
+    description: 'Completed industry certifications in full stack development and AI foundations.',
+  },
+  {
+    year: '2024',
+    title: 'AI Floor Plan Generator — Featured Build',
+    type: 'projects',
+    description: 'Designed and built the Automated AI Floor Plan Generator, integrating ML-based room layout with DXF export for AutoCAD.',
+  },
+  {
+    year: '2025',
+    title: 'AI Engineer & Open Source Contributor',
+    type: 'journey',
+    description: 'Continuing to build at the intersection of AI, web, and design systems.',
+  },
+];
 
 export const CERTIFICATIONS = [
   {
@@ -168,13 +186,13 @@ export const EXPERIENCE = [
   {
     role: 'AI Engineer (Project Lead)',
     org: 'Automated AI Floor Plan Generator',
-    period: '2026 — present',
-    description: 'Led end-to-end architecture: generative ML, AutoCAD plugin (C#), DXF processing, and 3D web viewer.',
+    period: '2024 — 2025',
+    description: 'Led end-to-end architecture: scikit-learn room-layout models, a FastAPI backend, and DXF export for AutoCAD.',
   },
   {
     role: 'Full Stack Developer',
     org: 'Independent Projects',
-    period: '2024 — Present',
+    period: '2022 — Present',
     description: 'Built and shipped React, FastAPI, and Node applications with a focus on UX and performance.',
   },
   {
@@ -199,5 +217,6 @@ export const NAV_LINKS = [
   { label: 'About', href: '#about' },
   { label: 'Skills', href: '#skills' },
   { label: 'Projects', href: '#projects' },
+  { label: 'Timeline', href: '#timeline' },
   { label: 'Contact', href: '#contact' },
 ];

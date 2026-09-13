@@ -58,12 +58,14 @@ export function ProjectModal({ id, onClose }: { id: string | null; onClose: () =
               >
                 <Github size={16} /> GitHub
               </a>
-              <a
-                href={project.demo}
-                className="btn-gradient inline-flex items-center gap-2 rounded-xl px-4 py-2.5 text-sm font-medium text-white"
-              >
-                <ExternalLink size={16} /> Live Demo
-              </a>
+              {project.demo && (
+                <a
+                  href={project.demo}
+                  className="btn-gradient inline-flex items-center gap-2 rounded-xl px-4 py-2.5 text-sm font-medium text-white"
+                >
+                  <ExternalLink size={16} /> Live Demo
+                </a>
+              )}
             </div>
           </motion.div>
         </motion.div>

@@ -65,13 +65,15 @@ export function Projects({ onOpen }: { onOpen: (id: string) => void }) {
                     >
                       <Github size={16} /> GitHub
                     </MagneticButton>
-                    <MagneticButton
-                      as="a"
-                      href={featured.demo}
-                      className="btn-glass inline-flex items-center gap-2 rounded-xl px-4 py-2.5 text-sm text-fg"
-                    >
-                      <ExternalLink size={16} /> Live Demo
-                    </MagneticButton>
+                    {featured.demo && (
+                      <MagneticButton
+                        as="a"
+                        href={featured.demo}
+                        className="btn-glass inline-flex items-center gap-2 rounded-xl px-4 py-2.5 text-sm text-fg"
+                      >
+                        <ExternalLink size={16} /> Live Demo
+                      </MagneticButton>
+                    )}
                     <MagneticButton
                       onClick={() => onOpen(featured.id)}
                       className="btn-gradient inline-flex items-center gap-2 rounded-xl px-4 py-2.5 text-sm font-medium text-white"

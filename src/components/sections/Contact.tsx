@@ -4,7 +4,7 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
 import emailjs from '@emailjs/browser';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Github, Linkedin, Mail, Phone, Send, CheckCircle2, AlertCircle, MapPin } from 'lucide-react';
+import { Github, Mail, Phone, Send, CheckCircle2, AlertCircle, MapPin } from 'lucide-react';
 import { PROFILE, SOCIALS } from '../../data/portfolio';
 import { SectionHeading, Reveal } from '../ui/Reveal';
 import { MagneticButton } from '../ui/MagneticButton';
@@ -18,10 +18,9 @@ const schema = z.object({
 
 type FormData = z.infer<typeof schema>;
 
-const SOCIAL_ICONS: Record<string, any> = { github: Github, linkedin: Linkedin, mail: Mail, phone: Phone };
+const SOCIAL_ICONS: Record<string, any> = { github: Github, mail: Mail, phone: Phone };
 const SOCIAL_HOVER: Record<string, string> = {
   github: 'hover:border-royal-400/50 hover:text-royal-400 hover:bg-royal-500/10',
-  linkedin: 'hover:border-accent-cyan/50 hover:text-accent-cyan hover:bg-accent-cyan/10',
   mail: 'hover:border-accent-purple/50 hover:text-accent-purple hover:bg-accent-purple/10',
   phone: 'hover:border-accent-emerald/50 hover:text-accent-emerald hover:bg-accent-emerald/10',
 };

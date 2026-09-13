@@ -1,7 +1,7 @@
-import { useRef, useState, type ReactNode, type ButtonHTMLAttributes } from 'react';
+import { useRef, useState, type ReactNode, type ButtonHTMLAttributes, type AnchorHTMLAttributes } from 'react';
 import { motion } from 'framer-motion';
 
-interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
+interface Props extends ButtonHTMLAttributes<HTMLButtonElement>, Pick<AnchorHTMLAttributes<HTMLAnchorElement>, 'download' | 'target' | 'rel'> {
   children: ReactNode;
   strength?: number;
   as?: 'button' | 'a';

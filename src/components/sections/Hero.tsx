@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
-import { ArrowDown, Download, Mail, Sparkles, Github, Linkedin, Code2, Brain, Boxes } from 'lucide-react';
+import { ArrowDown, Download, Mail, Sparkles, Github } from 'lucide-react';
 import { PROFILE } from '../../data/portfolio';
 import { Particles } from '../effects/Particles';
 import { MagneticButton } from '../ui/MagneticButton';
@@ -29,12 +29,6 @@ function useTypewriter(words: string[], speed = 90, pause = 1600) {
 
   return text;
 }
-
-const FLOAT_BADGES = [
-  { icon: Code2, label: 'React', className: 'left-[-8%] top-[18%]', color: 'from-royal-500/30 to-royal-700/10', accent: 'text-royal-400', delay: 0 },
-  { icon: Brain, label: 'AI / ML', className: 'right-[-6%] top-[8%]', color: 'from-accent-purple/30 to-accent-pink/10', accent: 'text-accent-purple', delay: 0.4 },
-  { icon: Boxes, label: 'Three.js', className: 'right-[-10%] bottom-[20%]', color: 'from-accent-cyan/30 to-accent-emerald/10', accent: 'text-accent-cyan', delay: 0.8 },
-];
 
 export function Hero() {
   const typed = useTypewriter(PROFILE.roles);
@@ -145,21 +139,29 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.55 }}
             className="mt-8 flex flex-wrap items-center justify-center gap-3 md:justify-start"
-          ><MagneticButton
-  as="a"
-  href="/ali.pdf"
-  download
-  target="_blank"
-  rel="noopener noreferrer"
-  className="btn-electric group inline-flex items-center gap-2 rounded-xl px-5 py-3 text-sm font-medium text-white"
->
-  <Download
-    size={16}
-    className="transition-transform group-hover:-translate-y-0.5"
-  />
-  Download Resume
-</MagneticButton>
-           
+          >
+            <MagneticButton
+              as="a"
+              href={PROFILE.resumeUrl}
+              download
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-electric group inline-flex items-center gap-2 rounded-xl px-5 py-3 text-sm font-medium text-white"
+            >
+              <Download size={16} className="transition-transform group-hover:-translate-y-0.5" /> Download Resume
+            </MagneticButton>
+            <MagneticButton
+              onClick={() => scrollTo('#contact')}
+              className="btn-glass group inline-flex items-center gap-2 rounded-xl px-5 py-3 text-sm font-medium text-fg"
+            >
+              <Mail size={16} className="transition-transform group-hover:rotate-12" /> Contact Me
+            </MagneticButton>
+            <MagneticButton
+              onClick={() => scrollTo('#projects')}
+              className="btn-glass group inline-flex items-center gap-2 rounded-xl px-5 py-3 text-sm font-medium text-fg"
+            >
+              See Projects
+            </MagneticButton>
           </motion.div>
 
           {/* quick socials */}
@@ -169,79 +171,57 @@ export function Hero() {
             transition={{ duration: 0.6, delay: 0.7 }}
             className="mt-6 flex items-center justify-center gap-3 md:justify-start"
           >
-
-
-
             <a href={PROFILE.github} aria-label="GitHub" className="grid h-9 w-9 place-items-center rounded-lg glass text-muted transition hover:text-electric-400 hover:border-electric-400/50 hover:bg-electric-500/10 hover:shadow-glow-electric">
               <Github size={15} />
-            </a>
-            <a href={PROFILE.linkedin} aria-label="LinkedIn" className="grid h-9 w-9 place-items-center rounded-lg glass text-muted transition hover:text-accent-cyan hover:border-accent-cyan/40 hover:bg-accent-cyan/10">
-              <Linkedin size={15} />
             </a>
           </motion.div>
         </div>
 
-        {/* Floating tech badges */}
-        {/* Hero Image */}
-<motion.div
-  initial={{ opacity: 0, x: 80 }}
-  animate={{ opacity: 1, x: 0 }}
-  transition={{ duration: 0.8, delay: 0.3 }}
-  className="relative mx-auto flex w-full items-center justify-center"
->
-  {/* Blue Glow */}
-  <div className="absolute h-[600px] w-[430px] rounded-full bg-gradient-to-br from-blue-500/30 via-cyan-400/20 to-purple-500/20 blur-[120px]" />
+        {/* Hero photo */}
+        <motion.div
+          initial={{ opacity: 0, x: 80 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, delay: 0.3 }}
+          className="relative mx-auto flex w-full items-center justify-center"
+        >
+          <div className="absolute h-[600px] w-[430px] rounded-full bg-gradient-to-br from-blue-500/30 via-cyan-400/20 to-purple-500/20 blur-[120px]" />
 
-  {/* Glass Background */}
-  <div className="absolute h-[560px] w-[390px] rounded-[40px] border border-white/10 bg-white/5 backdrop-blur-xl" />
+          <div className="absolute h-[560px] w-[390px] rounded-[40px] border border-white/10 bg-white/5 backdrop-blur-xl" />
 
-  {/* Floating Image */}
-  <motion.img
-    src="/ali.jpeg"
-    alt="Ali"
-    animate={{ y: [0, -15, 0] }}
-    transition={{
-      duration: 5,
-      repeat: Infinity,
-      ease: "easeInOut",
-    }}
-    whileHover={{
-      scale: 1.03,
-      rotateY: 8,
-      rotateX: -5,
-    }}
-    className="relative z-10 h-[560px] w-auto rounded-[35px] object-cover drop-shadow-[0_0_60px_rgba(37,99,235,0.45)]"
-    style={{ transformStyle: "preserve-3d" }}
-  />
+          <motion.img
+            src="/ali.jpeg"
+            alt={PROFILE.name}
+            animate={{ y: [0, -15, 0] }}
+            transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
+            whileHover={{ scale: 1.03, rotateY: 8, rotateX: -5 }}
+            className="relative z-10 h-[560px] w-auto rounded-[35px] object-cover drop-shadow-[0_0_60px_rgba(37,99,235,0.45)]"
+            style={{ transformStyle: 'preserve-3d' }}
+          />
 
-  {/* Floating Badge 1 */}
-  <motion.div
-    animate={{ y: [0, -8, 0] }}
-    transition={{ duration: 4, repeat: Infinity }}
-    className="absolute left-0 top-16 rounded-xl border border-cyan-500/30 bg-slate-900/70 px-4 py-2 backdrop-blur-xl"
-  >
-    <span className="text-cyan-400 font-semibold">⚛ React</span>
-  </motion.div>
+          <motion.div
+            animate={{ y: [0, -8, 0] }}
+            transition={{ duration: 4, repeat: Infinity }}
+            className="absolute left-0 top-16 z-20 rounded-xl border border-cyan-500/30 bg-slate-900/70 px-4 py-2 backdrop-blur-xl"
+          >
+            <span className="font-semibold text-cyan-400">⚛ React</span>
+          </motion.div>
 
-  {/* Floating Badge 2 */}
-  <motion.div
-    animate={{ y: [0, 8, 0] }}
-    transition={{ duration: 5, repeat: Infinity }}
-    className="absolute right-0 top-36 rounded-xl border border-purple-500/30 bg-slate-900/70 px-4 py-2 backdrop-blur-xl"
-  >
-    <span className="text-purple-400 font-semibold">🤖 AI Developer</span>
-  </motion.div>
+          <motion.div
+            animate={{ y: [0, 8, 0] }}
+            transition={{ duration: 5, repeat: Infinity }}
+            className="absolute right-0 top-36 z-20 rounded-xl border border-purple-500/30 bg-slate-900/70 px-4 py-2 backdrop-blur-xl"
+          >
+            <span className="font-semibold text-purple-400">🤖 AI Developer</span>
+          </motion.div>
 
-  {/* Floating Badge 3 */}
-  <motion.div
-    animate={{ y: [0, -10, 0] }}
-    transition={{ duration: 6, repeat: Infinity }}
-    className="absolute bottom-12 left-8 rounded-xl border border-blue-500/30 bg-slate-900/70 px-4 py-2 backdrop-blur-xl"
-  >
-    <span className="text-blue-400 font-semibold">🚀 MERN Stack</span>
-  </motion.div>
-</motion.div>
-
+          <motion.div
+            animate={{ y: [0, -10, 0] }}
+            transition={{ duration: 6, repeat: Infinity }}
+            className="absolute bottom-12 left-8 z-20 rounded-xl border border-blue-500/30 bg-slate-900/70 px-4 py-2 backdrop-blur-xl"
+          >
+            <span className="font-semibold text-blue-400">🚀 Full Stack</span>
+          </motion.div>
+        </motion.div>
       </div>
 
       <motion.button

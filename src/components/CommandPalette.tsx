@@ -8,7 +8,6 @@ const ACTIONS = [
   { label: 'Download Resume', hint: 'Action', action: () => window.open(PROFILE.resumeUrl, '_blank') },
   { label: 'Email Me', hint: 'Action', action: () => (window.location.href = `mailto:${PROFILE.email}`) },
   { label: 'GitHub', hint: 'External', action: () => window.open(PROFILE.github, '_blank') },
-  { label: 'LinkedIn', hint: 'External', action: () => window.open(PROFILE.linkedin, '_blank') },
 ];
 
 export function CommandPalette({ open, onClose }: { open: boolean; onClose: () => void }) {
