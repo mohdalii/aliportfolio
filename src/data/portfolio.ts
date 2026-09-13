@@ -24,11 +24,11 @@ export const SOCIALS = [
 ];
 
 export const STATS = [
-  { label: 'CGPA', value: 8.7, suffix: '', decimals: 1 },
-  { label: 'Projects Built', value: 24, suffix: '+' },
-  { label: 'Technologies', value: 30, suffix: '+' },
+  { label: 'CGPA', value: 7.2, suffix: '', decimals: 1 },
+  { label: 'Projects Built', value: 3, suffix: '+' },
+  { label: 'Technologies', value: 26, suffix: '+' },
   { label: 'Years Learning', value: 4, suffix: '+' },
-  { label: 'Certifications', value: 6, suffix: '' },
+  { label: 'Certifications', value: 4, suffix: '' },
 ];
 
 export const SKILLS = [
@@ -50,6 +50,7 @@ export const SKILLS = [
       { name: 'HTML', level: 95 },
       { name: 'CSS', level: 90 },
       { name: 'Tailwind', level: 92 },
+      { name: 'Flutter', level: 65 },
     ],
   },
   {
@@ -82,10 +83,9 @@ export const SKILLS = [
     items: [
       { name: 'Machine Learning', level: 88 },
       { name: 'Generative AI', level: 84 },
-      { name: 'Computer Vision', level: 82 },
-      { name: 'Deep Learning', level: 80 },
       { name: 'Data Mining', level: 78 },
       { name: 'Quantum Computing', level: 60 },
+      { name: 'Affective Computing', level: 55 },
     ],
   },
 ];

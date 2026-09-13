@@ -4,6 +4,8 @@ import { STATS, SOFT_SKILLS } from '../../data/portfolio';
 import { SectionHeading, Reveal, AnimatedCounter } from '../ui/Reveal';
 import { SpotlightCard } from '../ui/SpotlightCard';
 
+const TECH_STAT = STATS.find((s) => s.label === 'Technologies');
+
 const ABOUT_CARDS = [
   {
     icon: GraduationCap,
@@ -15,7 +17,7 @@ const ABOUT_CARDS = [
   {
     icon: Lightbulb,
     title: 'Skills',
-    body: 'Full stack development, machine learning, generative AI, and 3D visualization across 30+ technologies.',
+    body: `Full stack development, machine learning, and generative AI across ${TECH_STAT?.value ?? ''}${TECH_STAT?.suffix ?? ''} technologies.`,
     accent: 'amber' as const,
     glow: 'from-accent-amber/25 to-accent-pink/10',
   },
